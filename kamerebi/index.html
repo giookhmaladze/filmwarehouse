@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Filmcam Warehouse</title>
+    
+    
+</head>
+<body>
+    <header class="header">
+        <div class="headerori">
+        <a href="index.html"><img src="fotoeb/filmcam.png" alt="logo" class="logo"></a>
+        </div>
+        <div>
+        <h1 class="font">Film Camera Warehouse</h1>
+        </div>
+        <div>
+        <img src="fotoeb/shopping-cart-10985.svg" alt="shopping-cart-" class="cart-icon">
+        <a href="https://www.instagram.com/filmcam_warehouse/" target="_blank"><img src="fotoeb/instagram-logo-8869.svg" alt="ig-logo" class="ig-logo"></a>
+        </div>
+    </header>
+    <main>
+        
+        <img src="fotoeb/335915209_225002236672222_2131866876645062849_n.jpg" alt="film-cam" class="film-cam">
+        
+        
+        <button class="itsb">asdasdasdr</button>
+        
+        
+        <div class="slide-box">
+            
+            
+            <div class="slideshow-box">
+                
+                <div class="mySlides fade">
+                    
+                    <img src="fotoeb/336405131_3320277361618436_7715034662180956998_n.jpg" alt="blue-camera" style="width: 100%;">
+                    <div class="text">Blue 60ლ</div>
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="fotoeb/336139541_665313785600959_7758223086966720011_n.jpg" alt="red-camera" style="width: 100%;">
+                    <div class="text">Red 60ლ</div>
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="fotoeb/336174561_511386317860799_3550442608675366581_n.jpg" alt="white-camera" style="width: 100%;">
+                    <div class="text">White 60ლ</div>
+                </div>
+                <div class="mySlides fade">
+                    
+                    <img src="fotoeb/336543216_220888633850241_616959622019364107_n.jpg" alt="black-camera" style="width: 100%;">
+                    <div class="text">Black 60ლ</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+              </div>
+            
+        </div>
+        
+        <button class="knopk">Buy Now</button>
+
+        
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contact">
+            <img src="fotoeb/red-phone-7151.svg" alt="phone" class="icon">
+                <div >
+                    <p class="nom">+995 597 900 007</p>
+                    <p class="nom">+995 591 700 009</p>
+                </div>
+            
+            </div>
+            <div class="contact">
+                <img src="fotoeb/Mail-Icon-White-on-Black.png" alt="mail" class="icon">
+                <a href="mailto:name@email.com" class="nom">filmwarehouse1@gmail.com</a>
+            </div>
+            
+        </div>
+        
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+
+</body>
+</html>
